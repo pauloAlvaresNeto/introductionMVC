@@ -22,11 +22,11 @@ if(empty($nome && $bebida && $data)){
 
     if($idade >= 18){
         $dados = array(
-            "mensagem" =>  'olá ' . $nome . ' sua bebida favorita é ' .$bebida . '<br> Sua idade é ' . $idade . ', portanto você é de maior '
+            "mensagem" =>  'olá ' . $nome . ' sua bebida favorita é ' .$bebida . '. <br> Sua idade é ' . $idade . ', portanto você é de maior '
         );
     }else {
         $dados = array(
-            "mensagem" =>  'olá ' . $nome . ' sua bebida favorita é ' .$bebida . '<br> Sua idade é ' . $idade. ', portanto você é de menor '
+            "mensagem" =>  'olá ' . $nome . ' sua bebida favorita é ' .$bebida . '. <br> Sua idade é ' . $idade. ', portanto você é de menor '
         );
     }
     
