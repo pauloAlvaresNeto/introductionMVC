@@ -1,10 +1,17 @@
 <?php
 
 $nome = $_REQUEST['nome'];
-$data = $_REQUEST['data'];
 $bebida = $_REQUEST['bebida'];
+$data = $_REQUEST['data'];
 
-if(empty($nome)){
+$anoAtual = date('Y');
+
+$anoNasc = date("Y", strtotime($data));
+
+$idade = $anoAtual - $anoNasc;
+
+
+if(empty($nome && $bebida && $data)){
     $dados = array(
 
         "tipo" => 'error',
@@ -12,25 +19,20 @@ if(empty($nome)){
     );
 
 } else {
-    switch($animal) {
-        case '1' : $dados = array(
-            "tipo" => 'cachorro.png',
-            "mensagem" =>  'Olá' . $nome . 'sabemos que seu animal preferido é o cachorro'
-        );
-        break;
 
-        case '2' : $dados = array(
-            "tipo" => 'gato.png',
-            "mensagem" =>  'Olá' . $nome . 'sabemos que seu animal preferido é o gato'
+    if($idade >= 18){
+        $dados = array(
+            "mensagem" =>  'olá ' . $nome . ' sua bebida favorita é ' .$bebida . '<br> Sua idade é ' . $idade . ', portanto você é de maior '
         );
-        break;
-
-        case '3' : $dados = array(
-            "tipo" => 'peixe.png',
-            "mensagem" =>  'Olá' . $nome . 'sabemos que seu animal preferido é o peixe'
+    }else {
+        $dados = array(
+            "mensagem" =>  'olá ' . $nome . ' sua bebida favorita é ' .$bebida . '<br> Sua idade é ' . $idade. ', portanto você é de menor '
         );
-        break;
     }
+    
+    
+
+   
 }
 
 echo json_encode($dados);

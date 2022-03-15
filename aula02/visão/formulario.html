@@ -13,23 +13,33 @@
     <div class="container">
 
         <div class="row justify-content-center">
-            <h1>Hello my little Friend. Tell me your favorite Animal</h1>
+            <h1>Olá meu pequeno amigo</h1>
         </div>
         
-        <div class="row justify-content-center">
-            <div class="col-12 col-sm-8 col-md-6">
-                <form id="form">
-                    <label>Nome</label>
-                    <input type="text" value="" name="nome" id="nome" class="input-large" required>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4">
+                    <form id="form">
+                        <div class="form-group mt-5">
+                            <label>Digite seu nome</label>
+                            <input type="text" name="nome" id="nome" class="form-control">
+                        </div>
+                        
+                        <div class="form-group ">
+                            <label>Digite sua bebida favorita</label>
+                            <input type="text" name="bebida" id="bebida" class="form-control">
+                        </div>
 
-                    <label>Data Nascimento</label>
-                    <input type="text" value="" name="data" id="data" class="input-large" required>
-
-                    <label>Bebida</label>
-                    <input type="text" value="" name="bebida" id="bebida" class="input-large" required>
-                    
-                    <button class="btn btn-primary btn-send">Criar Conta</button>
-                    
+                        <div class="form-group ">
+                            <label>Digite sua data de nascimento</label>
+                            <input type="date" name="data" id="data" class="form-control">
+                        </div>
+                        
+                        <div class="form-group row justify-content-end">
+                            <div class="col-12 col-sm-8 col-md-6">
+                                <button class="btn btn-success btn-block btn-send">Enviar</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
